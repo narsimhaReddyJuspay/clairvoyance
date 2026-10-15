@@ -80,6 +80,7 @@ def by_key(monkeypatch):
 
         monkeypatch.setattr(widget_common, "get_widget_config_by_public_key", lookup)
         monkeypatch.setattr(widget_common, "_enforce_widget_ip_limit", no_limit)
+        monkeypatch.setattr(widget_common, "_enforce_widget_aggregate_limit", no_limit)
 
     return install
 
